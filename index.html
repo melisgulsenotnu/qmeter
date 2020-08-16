@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>QMeter</title>
+</head>
+
+<body>
+    <header>
+        <div class="col">
+            <div class="col-4">
+                <div class="logo">
+                    <svg width="97" height="24" viewBox="0 0 97 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.8559 16.5176V11.4617L16.6359 15.015C20.3954 10.0912 16.1647 3.22824 10.131 4.09118C8.5534 4.30438 7.06803 5.05565 5.97192 6.20286C1.54654 10.812 5.2446 18.7409 12.4359 17.878C12.6715 17.8475 12.9173 17.8374 13.1529 17.8881H13.1632C13.5115 17.9491 13.8188 18.1318 14.0646 18.3856L16.2056 20.5379C3.95386 26.0607 -4.88667 11.7765 2.99093 3.45159C12.7739 -6.20324 28.1194 6.30438 19.5349 17.6749L20.8769 18.9846V23.9998L12.8559 16.5176Z"
+                            fill="white" />
+                        <path
+                            d="M24.1962 21.0254H27.0747V14.2944C27.0747 13.9898 27.0952 13.6853 27.1567 13.3908C27.9659 9.24872 33.9586 9.12689 35.0035 13.1878C35.106 13.5634 35.1367 13.9594 35.1367 14.3553V21.0152H37.9333V14.0101C37.9333 13.0051 37.7284 12.0101 37.2982 11.0964C34.9421 6.22334 27.6279 6.04059 25.0054 10.8223C24.4523 11.8274 24.1962 12.9645 24.1962 14.1015V21.0254Z"
+                            fill="white" />
+                        <path d="M32.4528 14.1827H29.6869V21.0254H32.4528V14.1827Z" fill="white" />
+                        <path
+                            d="M52.9612 21.0659L52.9919 18.2131L46.2001 18.1421C45.8928 18.1421 45.5855 18.1116 45.2884 18.0609C41.1191 17.2182 41.0679 11.2791 45.1757 10.2741C45.5548 10.1827 45.9543 10.1522 46.3538 10.1522L53.0738 10.2233L53.1046 7.45172L46.026 7.38065C45.0118 7.3705 43.9977 7.55324 43.086 7.97963C38.1484 10.2639 37.8821 17.5025 42.6762 20.1624C43.6801 20.7208 44.8275 20.9847 45.985 21.005L52.9612 21.0659Z"
+                            fill="white" />
+                        <path d="M46.1456 12.816L46.1157 15.5569L53.0195 15.6308L53.0493 12.8899L46.1456 12.816Z"
+                            fill="white" />
+                        <path
+                            d="M81.9209 21.0659L81.9516 18.2131L75.1599 18.1421C74.8526 18.1421 74.5452 18.1116 74.2482 18.0609C70.0789 17.2182 70.0276 11.2791 74.1355 10.2741C74.5145 10.1827 74.914 10.1522 75.3135 10.1522L82.0336 10.2233L82.0643 7.45172L74.9857 7.38065C73.9716 7.3705 72.9574 7.55324 72.0457 7.97963C67.1081 10.2639 66.8418 17.5025 71.6359 20.1624C72.6399 20.7208 73.7872 20.9847 74.9448 21.005L81.9209 21.0659Z"
+                            fill="white" />
+                        <path d="M75.1092 12.8112L75.0793 15.552L81.9831 15.6259L82.0129 12.8851L75.1092 12.8112Z"
+                            fill="white" />
+                        <path d="M54.3954 7.58374H68.1838V10.203H62.6623V21.0254H59.8247V10.2436H54.3954V7.58374Z"
+                            fill="white" />
+                        <path
+                            d="M83.6726 7.58374H92.9434C93.2609 7.58374 93.5785 7.60404 93.8858 7.67511C97.8195 8.5279 98.0551 14.1218 94.4288 15.1776C95.6785 16.4365 96.3546 18.335 96.3341 21.0254H93.5273C93.5375 17.9695 92.4414 16.2639 90.3619 15.7563C89.9624 15.6548 89.5526 15.6243 89.1429 15.6243H83.6726V12.9949H92.5951C94.2853 12.9949 94.2853 10.1827 92.5951 10.1827H83.6726V7.58374Z"
+                            fill="white" />
+                    </svg>
+                </div>
+            </div>
+            <div class="col-8">
+
+            </div>
+        </div>
+    </header>
+    <content>
+        <div class="nav">
+            <ul class="nav-list">
+                <li><span>Navigation Menu</span></li>
+                <hr>
+                <li class="active"><a href="#">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.5951 6.52428C14.5947 6.52393 14.5944 6.52359 14.5941 6.52325L8.47525 0.404663C8.21444 0.143738 7.86768 0 7.49884 0C7.13 0 6.78324 0.143623 6.52232 0.404549L0.406708 6.52004C0.404648 6.5221 0.402588 6.52428 0.400528 6.52634C-0.135055 7.06501 -0.13414 7.939 0.40316 8.4763C0.648636 8.72189 0.972847 8.86414 1.31949 8.87901C1.33356 8.88039 1.34776 8.88107 1.36206 8.88107H1.60593V13.384C1.60593 14.275 2.33092 15 3.22218 15H5.61606C5.85867 15 6.05551 14.8033 6.05551 14.5605V11.0303C6.05551 10.6237 6.38625 10.2929 6.79285 10.2929H8.20483C8.61143 10.2929 8.94217 10.6237 8.94217 11.0303V14.5605C8.94217 14.8033 9.13889 15 9.38162 15H11.7755C12.6668 15 13.3917 14.275 13.3917 13.384V8.88107H13.6179C13.9866 8.88107 14.3334 8.73745 14.5944 8.47652C15.1323 7.93831 15.1325 7.06284 14.5951 6.52428Z"
+                                fill="#AB3459" />
+                        </svg>
+
+                        Branches</a></li>
+                <li><a href="#">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.5 6C5.95078 6 7.125 4.82578 7.125 3.375C7.125 1.92422 5.95078 0.75 4.5 0.75C3.04922 0.75 1.875 1.92422 1.875 3.375C1.875 4.82578 3.04922 6 4.5 6ZM6.3 6.75H6.10547C5.61797 6.98438 5.07656 7.125 4.5 7.125C3.92344 7.125 3.38438 6.98438 2.89453 6.75H2.7C1.20937 6.75 0 7.95938 0 9.45V10.125C0 10.7461 0.503906 11.25 1.125 11.25H7.875C8.49609 11.25 9 10.7461 9 10.125V9.45C9 7.95938 7.79062 6.75 6.3 6.75ZM11.25 6C12.4922 6 13.5 4.99219 13.5 3.75C13.5 2.50781 12.4922 1.5 11.25 1.5C10.0078 1.5 9 2.50781 9 3.75C9 4.99219 10.0078 6 11.25 6ZM12.375 6.75H12.2859C11.9602 6.8625 11.6156 6.9375 11.25 6.9375C10.8844 6.9375 10.5398 6.8625 10.2141 6.75H10.125C9.64688 6.75 9.20625 6.88828 8.81953 7.11094C9.39141 7.72734 9.75 8.54531 9.75 9.45V10.35C9.75 10.4016 9.73828 10.4508 9.73594 10.5H13.875C14.4961 10.5 15 9.99609 15 9.375C15 7.92422 13.8258 6.75 12.375 6.75Z"
+                                fill="#AB3459" />
+                        </svg>
+
+                        User Management</a></li>
+                <li><a href="#">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.21028 12.4119H2.21603C2.27534 12.4119 2.33465 12.4227 2.39396 12.4443L7.05787 14.2559C7.31668 14.3637 7.53774 14.3637 7.72106 14.2559C10.5625 12.2555 13.2692 10.3091 14.6657 8.97732C14.7897 8.8587 14.8922 8.72391 14.9461 8.56216C15.2372 7.72643 14.3476 6.84217 13.3447 7.38674L8.65924 10.0611C8.52983 10.1366 8.422 10.2444 8.3573 10.3792C8.03379 11.064 7.51078 11.3497 6.83681 11.3389C6.65349 11.3335 6.47017 11.285 6.29763 11.2041L3.93602 10.088V9.66208L6.61574 10.8968C7.85047 11.4144 8.74012 9.29005 7.50539 8.77244L3.96837 7.13333C3.81201 7.05784 3.63408 7.02549 3.46154 7.04167C2.37779 7.12254 1.28325 7.28969 0.167146 7.5431C0.0700935 7.56467 0 7.65094 0 7.75338V12.2016C0 12.3149 0.0916607 12.4119 0.21028 12.4119Z"
+                                fill="#AB3459" />
+                            <path
+                                d="M7.23044 7.0417C9.17495 7.0417 10.7513 5.46536 10.7513 3.52085C10.7513 1.57634 9.17495 0 7.23044 0C5.28593 0 3.70959 1.57634 3.70959 3.52085C3.70959 5.46536 5.28593 7.0417 7.23044 7.0417Z"
+                                fill="#AB3459" />
+                            <path
+                                d="M7.22504 5.95794C7.21965 5.95794 7.21426 5.95794 7.20347 5.95794C6.80987 5.95255 6.44862 5.74766 6.23834 5.41337L4.66933 2.91696C4.48601 2.6258 4.57227 2.24298 4.86343 2.05966C5.15459 1.87634 5.53741 1.96261 5.72073 2.25377L7.22504 4.64234L10.045 0.479865C10.2391 0.194099 10.6273 0.118614 10.913 0.312719C11.1988 0.506824 11.2743 0.895034 11.0802 1.1808L8.18478 5.45111C7.96911 5.76922 7.60786 5.95794 7.22504 5.95794Z"
+                                fill="#F5F7FB" stroke="#AB3459" stroke-width="0.1" stroke-miterlimit="10" />
+                        </svg>
+
+                        Services</a></li>
+                <li><a href="#">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.49992 5.15625C7.03637 5.15625 6.58323 5.29371 6.1978 5.55124C5.81237 5.80878 5.51197 6.17482 5.33458 6.60309C5.15718 7.03135 5.11077 7.5026 5.2012 7.95724C5.29164 8.41189 5.51486 8.8295 5.84264 9.15728C6.17042 9.48506 6.58803 9.70828 7.04268 9.79872C7.49732 9.88915 7.96857 9.84274 8.39683 9.66534C8.8251 9.48795 9.19114 9.18755 9.44868 8.80212C9.70621 8.41669 9.84367 7.96355 9.84367 7.5C9.84181 6.87897 9.59429 6.2839 9.15515 5.84477C8.71602 5.40563 8.12095 5.1581 7.49992 5.15625ZM12.5601 7.5C12.5589 7.719 12.5428 7.93766 12.512 8.15449L13.9385 9.27129C14.0006 9.32259 14.0425 9.39431 14.0566 9.47363C14.0707 9.55296 14.0562 9.63471 14.0155 9.7043L12.6661 12.034C12.6251 12.103 12.5611 12.1552 12.4853 12.1817C12.4095 12.2081 12.3269 12.2069 12.2519 12.1784L10.5746 11.5046C10.2254 11.7735 9.84317 11.9967 9.43732 12.1687L9.18654 13.9494C9.17251 14.0292 9.13121 14.1016 9.0697 14.1543C9.0082 14.207 8.9303 14.2367 8.84933 14.2383H6.15051C6.07101 14.2367 5.99438 14.2083 5.93314 14.1576C5.8719 14.1069 5.82965 14.0369 5.8133 13.9591L5.56252 12.1784C5.15555 12.0084 4.77307 11.7848 4.42521 11.5137L2.74797 12.1875C2.67299 12.216 2.59036 12.2172 2.51459 12.1909C2.43882 12.1645 2.37478 12.1123 2.33371 12.0434L0.984295 9.71397C0.943677 9.64438 0.929125 9.56262 0.94324 9.4833C0.957355 9.40398 0.999217 9.33226 1.06135 9.28096L2.48781 8.16416C2.45738 7.94405 2.44134 7.7222 2.43976 7.5C2.44098 7.281 2.45703 7.06234 2.48781 6.84551L1.06135 5.72871C0.999217 5.67741 0.957355 5.60569 0.94324 5.52637C0.929125 5.44704 0.943677 5.36529 0.984295 5.2957L2.33371 2.96602C2.37473 2.89705 2.43876 2.84476 2.51453 2.81834C2.5903 2.79192 2.67296 2.79307 2.74797 2.82158L4.42521 3.49541C4.77447 3.22647 5.15667 3.00327 5.56252 2.83125L5.8133 1.05059C5.82733 0.970825 5.86863 0.898414 5.93014 0.845726C5.99164 0.793038 6.06954 0.763344 6.15051 0.761719H8.84933C8.92883 0.763266 9.00546 0.791716 9.0667 0.842425C9.12794 0.893133 9.17019 0.963105 9.18654 1.04092L9.43732 2.82158C9.84481 2.9915 10.2278 3.21505 10.5761 3.48633L12.2519 2.8125C12.3268 2.78396 12.4095 2.78277 12.4853 2.80913C12.561 2.8355 12.6251 2.88773 12.6661 2.95664L14.0155 5.28633C14.0562 5.35591 14.0707 5.43767 14.0566 5.51699C14.0425 5.59632 14.0006 5.66804 13.9385 5.71934L12.512 6.83613C12.5424 7.05614 12.5585 7.2779 12.5601 7.5Z"
+                                fill="#AB3459" />
+                        </svg>
+
+                        Global Settings</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="content-header">
+                <div class="row">
+                    <div class="col">
+
+                        <h3>Branches</h3>
+                        <p>You can manage your branches from this section.</p>
+                    </div>
+                    <div class="col">
+                        <div class="float-right">
+                            <button type="button" class="btn btn-primary" class="dropdown-item" href="#"
+                                data-toggle="modal" data-target="#exampleModal">Add New Branch</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-box">
+                <table id="table_id" class="display">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Branch Name</th>
+                            <th>Prefix</th>
+                            <th>Operating Hours</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <a href="branch.html">Qmeter</a></td>
+                            <td>QMET</td>
+                            <td>08:00 - 17:00</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>CXLab</td>
+                            <td>CXLA</td>
+                            <td>09:00 - 18:00</td>
+                            <td>Closed</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Technolink</td>
+                            <td>TECH</td>
+                            <td>10:00 - 19:00</td>
+                            <td>Deactive</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Kapital Bank</td>
+                            <td>KAPI</td>
+                            <td>11:00 - 20:00</td>
+                            <td>Closed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </content>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Branch
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form class="form-horizontal">
+                        <fieldset>
+
+                            <!-- Form Name -->
+                            <legend>Form Name</legend>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-12 control-label" for="textinput">Branch Name</label>
+                                <div class="col-md-12">
+                                    <input id="textinput" name="textinput" type="text" placeholder="Branch Name"
+                                        class="form-control input-md">
+
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-12 control-label" for="Prefix">Prefix</label>
+                                <div class="col-md-12">
+                                    <input id="Prefix" name="Prefix" type="text" placeholder="Prefix"
+                                        class="form-control input-md">
+
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-12 control-label" for="textinput">Latitude</label>
+                                <div class="col-md-12">
+                                    <input id="textinput" name="textinput" type="text" placeholder="Latitude"
+                                        class="form-control input-md">
+
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-12 control-label" for="textinput">Longitude</label>
+                                <div class="col-md-12">
+                                    <input id="textinput" name="textinput" type="text" placeholder="Longitude"
+                                        class="form-control input-md">
+
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-12 control-label" for="textinput">Time Zone</label>
+                                <div class="col-md-12">
+                                    <input id="textinput" name="textinput" type="text" placeholder="Time Zone"
+                                        class="form-control input-md">
+
+                                </div>
+                            </div>
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-12 control-label" for="textinput">Description</label>
+                                <div class="col-md-12">
+                                    <input id="textinput" name="textinput" type="text" placeholder="Description"
+                                        class="form-control input-md">
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-12">
+                                    <button type="button" id="updateButton" class="btn btn-primary"
+                                        onclick="productUpdate();">
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </form>
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                    </button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            productsAdd();
+        });
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+    <script src="js/qmeter.js"></script>
+
+</body>
+
+</html>
